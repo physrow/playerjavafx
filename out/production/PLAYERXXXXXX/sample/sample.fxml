@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="897.0" prefWidth="2135.0" style="-fx-background-color: #1d1d1d;" stylesheets="@../../../../Desktop/darctheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fx:id="vBox" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="899.0" prefWidth="1375.0" stylesheets="@../../../../Desktop/darctheme.css">
+                    <children>
+                  <MediaView fitHeight="400.0" fitWidth="700.0">
+                     <VBox.margin>
+                        <Insets bottom="100.0" />
+                     </VBox.margin>
+                  </MediaView>
+                  <HBox prefHeight="130.0" prefWidth="1103.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="55.0" prefWidth="275.0" style="-fx-font-size: 32; -fx-font-family: &quot;Segoe UI Semibold&quot;;" stylesheets="@../../../../Desktop/darctheme.css" text="Name" textAlignment="CENTER" textFill="#f8f0f0" textOverrun="CLIP">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" prefHeight="55.0" prefWidth="333.0" style="-fx-font-size: 32; -fx-font-family: &quot;Segoe UI Semibold&quot;;" stylesheets="@../../../../Desktop/darctheme.css" text="Artist" textAlignment="CENTER" textFill="#f8f0f0" textOverrun="CLIP">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" prefHeight="55.0" prefWidth="345.0" style="-fx-font-size: 32; -fx-font-family: &quot;Segoe UI Semibold&quot;;" stylesheets="@../../../../Desktop/darctheme.css" text="Listeners" textAlignment="CENTER" textFill="#f8f0f0" textOverrun="CLIP">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" prefHeight="55.0" prefWidth="339.0" style="-fx-font-size: 32; -fx-font-family: &quot;Segoe UI Semibold&quot;;" stylesheets="@../../../../Desktop/darctheme.css" text="Duration" textAlignment="CENTER" textFill="#f8f0f0" textOverrun="CLIP">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="152.0" prefWidth="1119.0">
+                     <children>
+                        <Label fx:id="l_name" alignment="TOP_CENTER" prefHeight="55.0" prefWidth="242.0" textAlignment="CENTER" textFill="#f8f0f0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="l_artist" alignment="TOP_CENTER" prefHeight="55.0" prefWidth="392.0" textAlignment="CENTER" textFill="#f8f0f0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="l_listeners" alignment="TOP_CENTER" prefHeight="55.0" prefWidth="299.0" textAlignment="CENTER" textFill="#f8f0f0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="l_duration" alignment="TOP_CENTER" prefHeight="55.0" prefWidth="357.0" textAlignment="CENTER" textFill="#f8f0f0">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="song_name" prefHeight="21.0" prefWidth="1133.0" textFill="WHITE" />
+                        <Slider fx:id="progressBar" prefHeight="7.0" prefWidth="1375.0">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                     <effect>
+                        <Shadow color="#457f8a" height="26.69" radius="6.1725" width="0.0" />
+                     </effect>
+                  </Slider>
+                        <HBox prefHeight="0.0" prefWidth="1375.0">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#choose_method" prefHeight="86.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <effect>
+                              <Lighting bumpInput="$null">
+                                 <light>
+                                    <Light.Distant color="#feffff" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="67.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/e006e8506eda83fafb3bebb3dee37945.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <VBox prefHeight="74.0" prefWidth="80.0">
+                           <children>
+                                      <Button mnemonicParsing="false" onAction="#slow" prefHeight="61.0" prefWidth="5.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                                 <effect>
+                                    <Lighting bumpInput="$null">
+                                       <light>
+                                          <Light.Distant color="#feffff" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="75.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                       <image>
+                                          <Image url="@icons/fast_forward_icon_134506.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                                <Button mnemonicParsing="false" onAction="#fast" prefHeight="83.0" prefWidth="97.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <effect>
+                              <Lighting bumpInput="$null">
+                                 <light>
+                                    <Light.Distant color="#feffff" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="68.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/fast_forward_icon_134506.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Button>
+                                <Button mnemonicParsing="false" onAction="#stop" prefHeight="31.0" prefWidth="46.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <effect>
+                              <Lighting bumpInput="$null">
+                                 <light>
+                                    <Light.Distant color="#feffff" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="76.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/iconfinder_interface-solid-multimedia-stop-button_6127265.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Button>
+                                <Button mnemonicParsing="false" onAction="#play" prefHeight="76.0" prefWidth="49.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <effect>
+                              <Lighting bumpInput="$null">
+                                 <light>
+                                    <Light.Distant color="#feffff" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="78.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/playcircle_113957.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Button>
+                                <Button mnemonicParsing="false" onAction="#pause" prefHeight="88.0" prefWidth="107.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                           <effect>
+                              <Lighting bumpInput="$null">
+                                 <light>
+                                    <Light.Distant color="#feffff" />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <HBox.margin>
+                              <Insets left="30.0" right="50.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="68.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/pausecircularbutton_79505.png" />
+                                 </image></ImageView>
+                           </graphic></Button>
+                                <Slider fx:id="volumeSlider" maxHeight="14.0" maxWidth="364.0" prefHeight="14.0" prefWidth="364.0">
+                           <effect>
+                              <Shadow color="#56b885" height="0.0" radius="0.0" width="0.0" />
+                           </effect>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Slider>
+                            </children>
+                        </HBox>
+                    </children>
+               <effect>
+                  <Blend />
+               </effect>
+                </VBox>
+            </children>
+        </StackPane>
+    </center>
+   <left>
+      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="42.0" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/GitHub-Mark-64px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </left>
+   <right>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="list_of_songs" onMouseClicked="#set_song" prefHeight="836.0" prefWidth="299.0" style="-fx-background-color: #1d1d1d;" stylesheets="@../../../../Desktop/darctheme.css">
+               <VBox.margin>
+                  <Insets bottom="200.0" left="250.0" right="250.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
